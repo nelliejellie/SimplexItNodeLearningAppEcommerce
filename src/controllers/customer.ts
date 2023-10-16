@@ -3,7 +3,6 @@ import { db } from "../lib/db";
 
 export const getCustomers = async (req:express.Request, res:express.Response) =>{
     try {
-        console.log("hebwhdbsuvsbyvfs")
         const customers = await db.customer.findMany();
         return res.status(200).json(customers)
     } catch (error) {
